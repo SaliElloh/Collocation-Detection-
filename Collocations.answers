@@ -1,0 +1,98 @@
+COMPLETION OF THE PROGRAM:
+
+the program is complete, and all required implementation for chi square and PMI measures are done, as well as the rank.
+
+here' the PSEUDOCODE of what I did:
+
+1.Open the "collocations" file for reading.
+2.Filter Out Punctuation:Use list comprehension to filter out words that don't match the word pattern.
+3. Create Unigrams and Bigrams:
+* Create a list of unigrams (individual words) from word_list.
+* Create a list of bigrams (pairs of consecutive words) from word_list.
+* save to csv file "unigrams_bigrams.csv" for reference
+4. Count Unigrams and Bigrams:
+*Initialize dictionaries unigram_counts and bigram_counts to store counts.
+* Calculate unigram counts and bigram counts
+* Write Counts to a CSV File: "unigram_bigram_counts.csv."
+5. Calculate the Total Number of Observations (N):
+6. Define a function calculate_occurrence_table to calculate the 2x2 occurrence table matrix for a given bigram
+in a corpus.
+7. Define functions normalized_chi_square_test, chi_square_test, and calculate_pmi to perform statistical analyses.
+Analyze Data and Calculate Scores:
+8. Calculate normalized chi-square, chi-square, and PMI scores using respective functions for each bigram,
+Store these scores in dictionaries: normalized_chi_square_scores, chi_square_scores, and pmi_scores.
+9. Print Top Bigrams Based on Scores:
+* Sort the bigrams by their normalized chi-square scores in reverse order and print the top results.
+* Sort the bigrams by their chi-square scores in reverse order and print the top results.
+* Sort the bigrams by PMI scores in descending order and print the top results.
+
+
+TOP 20 NORMALIZED CHI-SQUARE SCORES:
+
+
+Bigram: ('quintuple', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('purses', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('Has', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('good-looking', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('cataloging', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('explores', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('summarize', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('cooling', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('alerted', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('rearrange', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('dogged', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('Allowing', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('yank', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('Allow', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('equates', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('Renault', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('miscalculated', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('Yacos', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('refocus', 'the') Normalized Chi Score: 455586607.2889566
+Bigram: ('bashing', 'the') Normalized Chi Score: 455586607.2889566
+
+
+TOP 20 PMI SCORES:
+
+Bigram: ('Golf', 'Course') PMI Score: 17.670134090432345
+Bigram: ('multi-spired', 'castle-like') PMI Score: 17.670134090432345
+Bigram: ('Traveling', 'Abroad') PMI Score: 17.670134090432345
+Bigram: ('Three-month', 'T-bill') PMI Score: 17.670134090432345
+Bigram: ('Competing', 'asset-allocation') PMI Score: 17.670134090432345
+Bigram: ('Mill', 'Playhouse') PMI Score: 17.670134090432345
+Bigram: ('Perfect', 'Witness') PMI Score: 17.670134090432345
+Bigram: ('Witness', 'Aidan') PMI Score: 17.670134090432345
+Bigram: ('Stockard', 'Channing') PMI Score: 17.670134090432345
+Bigram: ('Final', 'Days') PMI Score: 17.670134090432345
+Bigram: ('Brideshead', 'Revisited') PMI Score: 17.670134090432345
+Bigram: ('schizoid', 'horror') PMI Score: 17.670134090432345
+Bigram: ('Performances', 'kicks') PMI Score: 17.670134090432345
+Bigram: ('Breeder', 'Cup') PMI Score: 17.670134090432345
+Bigram: ('Polished', 'hooves') PMI Score: 17.670134090432345
+Bigram: ('Shiny', 'Nikes') PMI Score: 17.670134090432345
+Bigram: ('Glory', 'Enough') PMI Score: 17.670134090432345
+Bigram: ('Ku', 'Klux') PMI Score: 17.670134090432345
+Bigram: ('Klux', 'Klan') PMI Score: 17.670134090432345
+Bigram: ('Latest', 'Period') PMI Score: 17.670134090432345
+
+
+
+#A BRIEF DISCUSSION ON WHICH WORKS BETTER , PMI SCORE OR CHI SCORE:
+
+
+note; i calculated both normalized and non normalized chi-square scores using test sample in another file, not shown here
+ because the normalized scores were really big compared to what we saw in class. I wanted to compare the values to see
+what could have possibly been causing these huge values, so i tried not normalizing to see if it makes a difference. the
+non normalized values were less, but still very huge, which might indicate the the chi square test in this case,
+ isnt the most efficient or accurate approach in identifying collocations
+
+the large chi-square values could be attributed to two things, a larger sample size and a big difference between
+ observed and expected frequencies of these words together. in this case, the sample is not reasonably sized (way too big) and
+ the chi square test is really  sensitive to small frequencies in the data.
+because of this, any small difference appears significantly in the test, which im guessing is a case of overfitting here
+(when you train the model so much that it picks up on each and every frequency)
+the PMI test, on the other hand, had more reasonable values. this means that the data is not being overfitted, or
+it hasnt become too sensitive.
+
+also, what chi square test classified as collocations dont seem to be collocations, the pmi test, on the other hand,
+has more reasonable bigrams.
