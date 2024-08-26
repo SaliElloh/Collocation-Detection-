@@ -129,13 +129,19 @@ The repository includes the following files:
 ## How to Run the Project
 
 1. **Clone the Repository**:
-
+      ```bash
+   git clone https://github.com/SaliElloh/Naive-Bayes-Word-Sense-Disambiguation-.git
+   cd collocation-Detection-
+    ```
     
 2. **run the Script**:
- 
+      ```bash
+   python Collocation.py
+    ```
 
 3. **View Results**:
-
+   - After running the script, the output files will be generated in the project directory. You should see CSV files like unigrams_bigrams.csv and unigram_bigram_counts.csv.
+  
 
 <!-- Results -->
 
