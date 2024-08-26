@@ -27,17 +27,65 @@ Collocations are combinations of words that frequently appear together in text a
 
 ##  Dataset:
 
+The dataset used in this project is a text file named Collocations that contains the corpus data. The text is tokenized, and both unigrams and bigrams are extracted for analysis.
+
 
 ### Data Example:
 
 
-<!-- METHODOLOGY -->
-
 ## Files:
+
+The repository includes the following files:
+
+1. **Collocation.py**: Python script containing the implementation for collocation detection using Chi-Square and PMI.
+2. **Collocations**: The corpus text file for analysis.
+3. **Collocations.answers**: Text file with detailed results and explanations.
+4. **unigrams_bigrams.csv**: CSV file with unigrams and bigrams.
+5. **unigram_bigram_counts.csv**: CSV file with unigram and bigram counts.
+6. **co_occurrence_table.csv**: CSV file with the co-occurrence table.
+
+<!-- METHODOLOGY -->
 
 ## Methodology
 
 ### Algorithm Steps:
+
+1.Data Loading
+- Read Corpus:
+  - Open the "collocations" file and read its contents into a list of words.
+  - Data Cleaning and Preparation
+
+2. Filter Out Punctuation:
+Use a regular expression to filter out words that do not match the word pattern, retaining only valid words.
+Feature Extraction
+
+Create Unigrams and Bigrams:
+Extract unigrams (individual words) and bigrams (pairs of consecutive words) from the cleaned data.
+Save to CSV:
+Save the unigrams and bigrams to "unigrams_bigrams.csv" for reference.
+Count Calculation
+
+Count Unigrams and Bigrams:
+Initialize dictionaries to store counts for unigrams and bigrams.
+Calculate the frequency of each unigram and bigram.
+Save Counts to CSV:
+Save the unigram and bigram counts to "unigram_bigram_counts.csv".
+Statistical Analysis
+
+Calculate Total Observations:
+Determine the total number of words in the corpus (N).
+Generate Occurrence Table:
+Define a function to calculate the 2x2 occurrence table matrix for each bigram in the corpus.
+Perform Statistical Tests:
+Define functions to calculate normalized Chi-Square, Chi-Square, and PMI scores for bigrams.
+Score Calculation and Evaluation
+
+Analyze Bigrams:
+Compute normalized Chi-Square, Chi-Square, and PMI scores for each bigram and store these scores in dictionaries.
+Sort and Output Top Bigrams:
+Sort the bigrams based on normalized Chi-Square, Chi-Square, and PMI scores.
+Print the top 20 bigrams for each measure.
+
 
 
 ### Example:
