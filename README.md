@@ -79,7 +79,7 @@ The repository includes the following files:
       - **Perform Statistical Tests**:
         - Define functions to calculate normalized Chi-Square, Chi-Square, and PMI scores for bigrams.
 
-  6.**Score Calculation and Evaluation**
+  6. **Score Calculation and Evaluation**
       - **Analyze Bigrams**:
         - Compute normalized Chi-Square, Chi-Square, and PMI scores for each bigram and store these scores in dictionaries.
       - **Sort and Output Top Bigrams**:
