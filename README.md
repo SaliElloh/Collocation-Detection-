@@ -140,7 +140,7 @@ The repository includes the following files:
     ```
 
 3. **View Results**:
-   - After running the script, the output files will be generated in the project directory. You should see CSV files like unigrams_bigrams.csv and unigram_bigram_counts.csv.
+   - After running the script, the output files will be generated in the project directory. You should see CSV files like unigrams_bigrams.csv, unigram_bigram_counts.csv, and co_occurrence_table.csv.
   
 
 <!-- Results -->
