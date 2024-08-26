@@ -52,7 +52,7 @@ The dataset used in this project is a text file named Collocations that contains
          ```
       - Bigrams:
          ```bash
-      - [("good", "strategy"), ("rising", "market"), ("25%", "leveraged"), ("leveraged", "portfolio") ,("portfolio", "in") ,("in", "effect") ,("effect", "allows"), ("allows", "investors"), .... ("for", "them")]
+        [("good", "strategy"), ("rising", "market"), ("25%", "leveraged"), ("leveraged", "portfolio") ,("portfolio", "in") ,("in", "effect") ,("effect", "allows"), ("allows", "investors"), .... ("for", "them")]
          ```
 
    3. Count Unigrams and Bigrams:
