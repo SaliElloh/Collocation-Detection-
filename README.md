@@ -67,19 +67,6 @@ The dataset used in this project is a text file named Collocations that contains
          - ("good", "strategy"): 1
          ```
 
-
-
-## Files:
-
-The repository includes the following files:
-
-1. **Collocation.py**: Python script containing the implementation for collocation detection using Chi-Square and PMI.
-2. **Collocations**: The corpus text file for analysis.
-3. **Collocations.answers**: Text file with detailed results and explanations.
-4. **unigrams_bigrams.csv**: CSV file with unigrams and bigrams.
-5. **unigram_bigram_counts.csv**: CSV file with unigram and bigram counts.
-6. **co_occurrence_table.csv**: CSV file with the co-occurrence table.
-
 <!-- METHODOLOGY -->
 
 ## Methodology
@@ -123,7 +110,16 @@ The repository includes the following files:
         - Print the top 20 bigrams for each measure.
 
 
-### Example:
+## Files:
+
+The repository includes the following files:
+
+1. **Collocation.py**: Python script containing the implementation for collocation detection using Chi-Square and PMI.
+2. **Collocations**: The corpus text file for analysis.
+3. **Collocations.answers**: Text file with detailed results and explanations.
+4. **unigrams_bigrams.csv**: CSV file with unigrams and bigrams.
+5. **unigram_bigram_counts.csv**: CSV file with unigram and bigram counts.
+6. **co_occurrence_table.csv**: CSV file with the co-occurrence table.
    
 <!-- Results -->
 ## How to Run the Project
