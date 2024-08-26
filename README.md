@@ -50,42 +50,41 @@ The repository includes the following files:
 
 ### Algorithm Steps:
 
-1. **Data Loading**
-  - **Read Corpus**:
-    - Open the "collocations" file and read its contents into a list of words.
+  1. **Data Loading**
+      - **Read Corpus**:
+        - Open the "collocations" file and read its contents into a list of words.
   
- **Data Cleaning and Preparation**
-   - **Filter Out Punctuation**:
-     - Use a regular expression to filter out words that do not match the word pattern, retaining only valid word
+  2. **Data Cleaning and Preparation**
+       - **Filter Out Punctuation**:
+         - Use a regular expression to filter out words that do not match the word pattern, retaining only valid word
   
-3. **Feature Extraction**
-  - **Create Unigrams and Bigrams**:
-    - Extract unigrams (individual words) and bigrams (pairs of consecutive words) from the cleaned data.
-  - **Save to CSV**:
-    - Save the unigrams and bigrams to "unigrams_bigrams.csv" for reference.
+  3. **Feature Extraction**
+      - **Create Unigrams and Bigrams**:
+        - Extract unigrams (individual words) and bigrams (pairs of consecutive words) from the cleaned data.
+      - **Save to CSV**:
+        - Save the unigrams and bigrams to "unigrams_bigrams.csv" for reference.
 
-4. **Count Calculation**
-  - **Count Unigrams and Bigrams**:
-    - Initialize dictionaries to store counts for unigrams and bigrams.
-    - Calculate the frequency of each unigram and bigram.
-  - **Save Counts to CSV**:
-    - Save the unigram and bigram counts to "unigram_bigram_counts.csv".
+  4. **Count Calculation**
+      - **Count Unigrams and Bigrams**:
+        - Initialize dictionaries to store counts for unigrams and bigrams.
+        - Calculate the frequency of each unigram and bigram.
+      - **Save Counts to CSV**:
+        - Save the unigram and bigram counts to "unigram_bigram_counts.csv".
 
-5. **Statistical Analysis**
+  5. **Statistical Analysis**
+      - **Calculate Total Observations**:
+        - Determine the total number of words in the corpus (N).
+      - **Generate Occurrence Table**:
+        - Define a function to calculate the 2x2 occurrence table matrix for each bigram in the corpus.
+      - **Perform Statistical Tests**:
+        - Define functions to calculate normalized Chi-Square, Chi-Square, and PMI scores for bigrams.
 
-  - **Calculate Total Observations**:
-    - Determine the total number of words in the corpus (N).
-  - **Generate Occurrence Table**:
-    - Define a function to calculate the 2x2 occurrence table matrix for each bigram in the corpus.
-  - **Perform Statistical Tests**:
-    - Define functions to calculate normalized Chi-Square, Chi-Square, and PMI scores for bigrams.
-
-6.**Score Calculation and Evaluation**
-  - **Analyze Bigrams**:
-    - Compute normalized Chi-Square, Chi-Square, and PMI scores for each bigram and store these scores in dictionaries.
-  - **Sort and Output Top Bigrams**:
-    - Sort the bigrams based on normalized Chi-Square, Chi-Square, and PMI scores
-    - Print the top 20 bigrams for each measure.
+  6.**Score Calculation and Evaluation**
+      - **Analyze Bigrams**:
+        - Compute normalized Chi-Square, Chi-Square, and PMI scores for each bigram and store these scores in dictionaries.
+      - **Sort and Output Top Bigrams**:
+        - Sort the bigrams based on normalized Chi-Square, Chi-Square, and PMI scores
+        - Print the top 20 bigrams for each measure.
 
 
 ### Example:
