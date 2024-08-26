@@ -31,11 +31,34 @@ The dataset used in this project is a text file named Collocations that contains
 
 ### Data Example:
 
-   ```bash
+   1. Tokenizing and Preprocessing:
+      - Raw text:
+         ```bash
+          It 's a good strategy in a rising market , where a 25 % leveraged portfolio in effect allows investors to have 125 % of their money working for them .
+         ```
 
-   These people invested in " leveraged " junk bond mutual funds , the publicly traded funds that make a habit of taking out loans to buy extra junk .
-    It 's a good strategy in a rising market , where a 25 % leveraged portfolio in effect allows investors to have 125 % of their money working for them .
-   ```
+      - Tokenized words:
+         ```bash
+          ["It's", "a", "good", "strategy", "in", "a", "rising", "market", "where", "a", "25%", "leveraged", "portfolio", "in", "effect", "allows", "investors", "to", "have", "125%", "of", "their", "money", "working", "for", "them"]
+         ```
+      - Remove Punctuation:
+         ```bash
+        ["It", "s", "a", "good", "strategy", "in", "a", "rising", "market", "where", "a", "25", "leveraged", "portfolio", "in", "effect", "allows", "investors", "to", "have", "125", "of", "their", "money", "working", "for", "them"]
+         ```
+   2. Feature Extraction:
+      - Unigrams:
+         ```bash
+        ["good", "strategy", "rising", "market", "25%", "leveraged", "portfolio", "effect", "investors", "125%", "money"]
+         ```
+      - Bigrams:
+      - [("good", "strategy"), ("rising", "market"), ("25%", "leveraged"), ("leveraged", "portfolio") ,("portfolio", "in") ,("in", "effect") ,("effect", "allows"), ("allows", "investors"), .... ("for", "them")]
+
+   3. Count Unigrams and Bigrams:
+      - Unigrams:  
+         - "good": 1
+         - "strategy": 1
+      - Bigrams:
+         - ("good", "strategy"): 1
 
 
 ## Files:
