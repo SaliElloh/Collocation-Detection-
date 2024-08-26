@@ -147,6 +147,24 @@ The repository includes the following files:
 
 ## Results:
 
+### Top 20 Normalized Chi-Square Scores
+
+| **Rank** | **Bigram**                      | **Normalized Chi Score** |
+|----------|--------------------------------|--------------------------|
+| 1        | ('quintuple', 'the')            | 455586607.29             |
+| 2        | ('purses', 'the')               | 455586607.29             |
+...         ....                              .....
+| 20       | ('bashing', 'the')              | 455586607.29             |
+
+### Top 20 PMI Scores
+
+| **Rank** | **Bigram**                       | **PMI Score**  |
+|----------|---------------------------------|----------------|
+| 1        | ('Golf', 'Course')               | 17.67          |
+| 2        | ('multi-spired', 'castle-like')  | 17.67          |
+
+| 20        | ('Latest', 'Period')             | 17.67          |
+
 
 <!-- Built With -->
 
