@@ -27,10 +27,15 @@ Collocations are combinations of words that frequently appear together in text a
 
 ##  Dataset:
 
-The dataset used in this project is a text file named Collocations that contains the corpus data. The text is tokenized, and both unigrams and bigrams are extracted for analysis.
-
+The dataset used in this project is a text file named Collocations that contains a corpus of text data. The primary goal of using this dataset is to analyze word patterns by extracting and examining unigrams (single words) and bigrams (pairs of consecutive words).
 
 ### Data Example:
+
+   ```bash
+
+   These people invested in " leveraged " junk bond mutual funds , the publicly traded funds that make a habit of taking out loans to buy extra junk .
+    It 's a good strategy in a rising market , where a 25 % leveraged portfolio in effect allows investors to have 125 % of their money working for them .
+   ```
 
 
 ## Files:
